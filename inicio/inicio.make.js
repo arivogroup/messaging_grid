@@ -1,6 +1,6 @@
-var webflow = webflow || [];
-webflow.push(function () {
-  // display error messages
+var Webflow = Webflow || [];
+Webflow.push(function () {
+  // display error message
   function displayError(message) {
     hideLoading();
     failureMessage.innerText = message;
@@ -39,14 +39,16 @@ webflow.push(function () {
     xhr.timeout = requestTimeout;
   }
 
-  // triggerd form submit
+  // triggered form submit
   function triggerSubmit(event) {
-    // prevent defaault behavior form submit
+    // prevent default behavior form submit behavior
     event.preventDefault();
 
+    // fill-in user data and update Content
     // slug construction
     let email_slug = document.getElementById("email").value;
     let slug = md5(email_slug);
+    let URLdomain = window.location.host;
 
     // setup + send xhr request
     let formData = new FormData(event.target);
@@ -60,10 +62,9 @@ webflow.push(function () {
     xhr.onload = function () {
       if (xhr.status === 302) {
         showLoading();
-        let waitSuccessMessage = setTimeout(delayUpdate, 3500);
-        function delayUpdate() {
-          let URLdomain = window.location.host;
-          window.location = "https://" + URLdomain + "tully-box" + slug;
+        let waitSuccessMessage = setTimeout(section_Update, 1500);
+        function section_Update() {
+          window.location = "https://" + URLdomain + "/tully-box/" + slug;
         }
       } else {
         displayError(errorMessage);
@@ -72,20 +73,20 @@ webflow.push(function () {
 
     // capture xhr request timeout
     xhr.ontimeout = function () {
-      displayError(errorMessageTimeOut);
+      displayError(errorMessageTimedOut);
     };
   }
 
-  // define form variables
   const form = document.getElementById("form_personal");
-  const formContent = document.getElementById("wf-form-Personal-Info");
-  const failureMessage = document.getElementById("form-error-message");
-  const successMessage = document.getElementById("form-success-message");
+  let formContent = document.getElementById("wf-form-Personal-Info");
+  let failureMessage = document.getElementById("form-error-message");
+  let successMessage = document.getElementById("form-success-message");
 
-  let requestTimeout = 5000;
+  // set request timeout in milliseconds (1000ms = 1second)
+  let requestTimeout = 10000;
   // error messages
-  let errorMessageTimeOut = "Oops! Seems this timed out. Please try again.";
-  let errorMessage = "Oops! Something went wrong. Please tryy again.";
+  let errorMessageTimedOut = "Oops! Seems this timed out. Please try again.";
+  let errorMessage = "Oops! Something went wrong. Please try again.";
 
   // capture form submit
   form.addEventListener("submit", triggerSubmit);
