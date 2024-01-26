@@ -1,3 +1,5 @@
+const hidden_ItemId = document.getElementById("Hidden-ItemId");
+
 // Seccion Nosotros-Nosotros(N-N)
 const name_NN = "N_N_";
 const hidden_NN = document.getElementById("Hidden-NN");
@@ -77,6 +79,7 @@ Webflow.push(function () {
     hidden_EE.value = addArrayAnsweres(name_EE);
     hidden_EN.value = addArrayAnsweres(name_EN);
     hidden_NE.value = addArrayAnsweres(name_NE);
+    hidden_ItemId.value = document.getElementById("Header-ItemId").textContent;
 
     // setup + send xhr request
     let formData = new FormData(event.target);
