@@ -112,8 +112,8 @@ Webflow.push(function () {
 
   const form_tully = document.getElementById("Form-Tully-Box");
   let formContent_tully = document.getElementById("wf-form-Tully-Box");
-  let failureMessage_tully = document.getElementById("Tully-Success-Message");
-  let successMessage_tully = document.getElementById("Tully-Error-Message");
+  let failureMessage_tully = document.getElementById("Tully-Error-Message");
+  let successMessage_tully = document.getElementById("Tully-Success-Message");
 
   // set request timeout in milliseconds (1000ms = 1second)
   let requestTimeout_tully = 10000;
