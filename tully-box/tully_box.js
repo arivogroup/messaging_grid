@@ -16,14 +16,14 @@ for (let j = 0; j < array_sign_NN.length; j++) {
     let result = N_N.slice(array_sign_NN[j - 1], array_sign_NN[j]);
     let listItem = document.createElement("li");
     listItem.textContent = result;
-    list.appendChild(listItem);
+    list_NN.appendChild(listItem);
   }
   if (array_sign_NN[j] != 0 && j != 1) {
     let initPosition = array_sign_NN[j - 1] + 2;
     let result = N_N.slice(initPosition, array_sign_NN[j]);
     let listItem = document.createElement("li");
     listItem.textContent = result;
-    list.appendChild(listItem);
+    list_NN.appendChild(listItem);
   }
 }
 
