@@ -1,32 +1,3 @@
-//---------- Showing Content Code  Related
-// ListItem Nosotros-Nosotros
-let list_NN = document.querySelector(".output_nn ul");
-list_NN.innerHTML = "";
-
-let array_sign_NN = [0];
-
-for (let i = 0; i < N_N.length; i++) {
-  if (N_N[i] === "¬") {
-    array_sign_NN.push(i);
-  }
-}
-
-for (let j = 0; j < array_sign_NN.length; j++) {
-  if (array_sign_NN[j] != 0 && j === 1) {
-    let result = N_N.slice(array_sign_NN[j - 1], array_sign_NN[j]);
-    let listItem = document.createElement("li");
-    listItem.textContent = result;
-    list_NN.appendChild(listItem);
-  }
-  if (array_sign_NN[j] != 0 && j != 1) {
-    let initPosition = array_sign_NN[j - 1] + 2;
-    let result = N_N.slice(initPosition, array_sign_NN[j]);
-    let listItem = document.createElement("li");
-    listItem.textContent = result;
-    list_NN.appendChild(listItem);
-  }
-}
-
 //---------- Form Submit Code Related
 const hidden_ItemId = document.getElementById("Hidden-ItemId");
 const hidden_Email = document.getElementById("Hidden-Email");
