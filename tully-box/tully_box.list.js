@@ -2,7 +2,6 @@
 function listItemWebflow(result) {
   let listItem = document.createElement("li");
   listItem.textContent = result;
-  list_NN.appendChild(listItem);
 }
 
 // ListItem Nosotros-Nosotros
@@ -35,11 +34,13 @@ for (let j = 0; j < array_sign_NN.length; j++) {
   if (array_sign_NN[j] != 0 && j === 1) {
     let result = N_N.slice(array_sign_NN[j - 1], array_sign_NN[j]);
     listItemWebflow(result);
+    list_NN.appendChild(listItem);
   }
   if (array_sign_NN[j] != 0 && j != 1) {
     let initPosition = array_sign_NN[j - 1] + 2;
     let result = N_N.slice(initPosition, array_sign_NN[j]);
     listItemWebflow(result);
+    list_NN.appendChild(listItem);
   }
 }
 
@@ -53,11 +54,13 @@ for (let j = 0; j < array_sign_EE.length; j++) {
   if (array_sign_EE[j] != 0 && j === 1) {
     let result = E_E.slice(array_sign_EE[j - 1], array_sign_EE[j]);
     listItemWebflow(result);
+    list_EE.appendChild(listItem);
   }
   if (array_sign_EE[j] != 0 && j != 1) {
     let initPosition = array_sign_EE[j - 1] + 2;
     let result = E_E.slice(initPosition, array_sign_EE[j]);
     listItemWebflow(result);
+    list_EE.appendChild(listItem);
   }
 }
 
@@ -71,11 +74,13 @@ for (let j = 0; j < array_sign_NE.length; j++) {
   if (array_sign_NE[j] != 0 && j === 1) {
     let result = N_E.slice(array_sign_NE[j - 1], array_sign_NE[j]);
     listItemWebflow(result);
+    list_NE.appendChild(listItem);
   }
   if (array_sign_NE[j] != 0 && j != 1) {
     let initPosition = array_sign_NE[j - 1] + 2;
     let result = N_E.slice(initPosition, array_sign_NE[j]);
     listItemWebflow(result);
+    list_NE.appendChild(listItem);
   }
 }
 
@@ -89,10 +94,12 @@ for (let j = 0; j < array_sign_EN.length; j++) {
   if (array_sign_EN[j] != 0 && j === 1) {
     let result = E_N.slice(array_sign_EN[j - 1], array_sign_EN[j]);
     listItemWebflow(result);
+    list_EN.appendChild(listItem);
   }
   if (array_sign_EN[j] != 0 && j != 1) {
     let initPosition = array_sign_EN[j - 1] + 2;
     let result = E_N.slice(initPosition, array_sign_EN[j]);
     listItemWebflow(result);
+    list_EN.appendChild(listItem);
   }
 }
