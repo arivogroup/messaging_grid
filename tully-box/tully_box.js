@@ -42,7 +42,7 @@ Webflow.push(function () {
 
   // show the form
   function showForm_tully() {
-    formContent_tully.style.display = "flex";
+    formContent_tully.style.display = "block";
   }
 
   // listen for xhr events
