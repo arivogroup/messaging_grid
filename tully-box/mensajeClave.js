@@ -3,7 +3,7 @@ const MC_hidden_ItemId = document.getElementById("MC-Hidden-Item-Id");
 const MC_hidden_Email = document.getElementById("MC-Hidden-Email");
 
 // Seccion Columna 1 (Col 1) -> (Nombre Ref. Capacidad)
-const name_CAP = "Capacidadd-";
+const name_CAP = "Capacidad-";
 const hidden_CAP = document.getElementById("Hidden-Capacidad");
 
 // Seccion Columna 2 (Col 2) -> (Nombre Ref. Vision)
