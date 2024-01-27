@@ -70,7 +70,6 @@ for (let i = 0; i < N_N.length; i++) {
   }
 }
 for (let j = 0; j < array_sign_NN.length; j++) {
-  let count = 1;
   if (array_sign_NN[j] != 0 && j === 1) {
     let result = N_N.slice(array_sign_NN[j - 1], array_sign_NN[j]);
     let resultBullet = "⦿ " + result;
@@ -78,7 +77,6 @@ for (let j = 0; j < array_sign_NN.length; j++) {
     listItem.textContent = resultBullet;
     list_NN.appendChild(listItem);
     document.getElementById("N_N_1").value = result;
-    count = count++;
   }
   if (array_sign_NN[j] != 0 && j != 1) {
     let initPosition = array_sign_NN[j - 1] + 2;
@@ -87,8 +85,7 @@ for (let j = 0; j < array_sign_NN.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_NN.appendChild(listItem);
-    document.getElementById("N_N_" + count).value = result;
-    count = count++;
+    document.getElementById("N_N_" + j).value = result;
   }
 }
 
@@ -105,6 +102,7 @@ for (let j = 0; j < array_sign_EE.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_EE.appendChild(listItem);
+    document.getElementById("E_E_1").value = result;
   }
   if (array_sign_EE[j] != 0 && j != 1) {
     let initPosition = array_sign_EE[j - 1] + 2;
@@ -113,6 +111,7 @@ for (let j = 0; j < array_sign_EE.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_EE.appendChild(listItem);
+    document.getElementById("E_E_" + j).value = result;
   }
 }
 
@@ -129,6 +128,7 @@ for (let j = 0; j < array_sign_NE.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_NE.appendChild(listItem);
+    document.getElementById("N_E_1").value = result;
   }
   if (array_sign_NE[j] != 0 && j != 1) {
     let initPosition = array_sign_NE[j - 1] + 2;
@@ -137,6 +137,7 @@ for (let j = 0; j < array_sign_NE.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_NE.appendChild(listItem);
+    document.getElementById("N_E_" + j).value = result;
   }
 }
 
@@ -153,6 +154,7 @@ for (let j = 0; j < array_sign_EN.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_EN.appendChild(listItem);
+    document.getElementById("E_N_1").value = result;
   }
   if (array_sign_EN[j] != 0 && j != 1) {
     let initPosition = array_sign_EN[j - 1] + 2;
@@ -161,5 +163,6 @@ for (let j = 0; j < array_sign_EN.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_EN.appendChild(listItem);
+    document.getElementById("E_N_" + j).value = result;
   }
 }
