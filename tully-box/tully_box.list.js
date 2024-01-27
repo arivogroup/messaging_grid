@@ -1,6 +1,6 @@
 // Get Initials from  Names
-let nombrePrincipal = document.getElementById("nombre-principal").value;
-let nombreSuplente = document.getElementById("nombre-suplente").vaalue;
+let nombrePrincipal = document.getElementById("nombre-principal").textContent;
+let nombreSuplente = document.getElementById("nombre-suplente").textContent;
 let inicialesPrincipal = "";
 let inicialesSuplente = "";
 
@@ -15,6 +15,13 @@ for (let i = 0; i < nombrePrincipal.length; i++) {
     inicialesPrincipal = inicialesPrincipal + nombrePrincipal[i + 1];
   }
 }
+// Llenando los Headers con las iniciales del nombre Principal
+for (let i = 1; i <= 4; i++) {
+  document.getElementById("Form-Col-" + i + "-IP").textContent =
+    inicialesPrincipal;
+  document.getElementById("List-Col-" + i + "-IP").textContent =
+    inicialesPrincipal;
+}
 
 // Iniciales Nombre Suplente
 for (let i = 0; i < nombreSuplente.length; i++) {
@@ -26,6 +33,13 @@ for (let i = 0; i < nombreSuplente.length; i++) {
   if (i != 0 && nombreSuplente[i] === " " && i < nombreSuplente.length - 1) {
     inicialesSuplente = inicialesSuplente + nombreSuplente[i + 1];
   }
+}
+// Llenando los Headers con las iniciales del nombre Suplente
+for (let i = 1; i <= 4; i++) {
+  document.getElementById("Form-Col-" + i + "-IS").textContent =
+    inicialesSuplente;
+  document.getElementById("List-Col-" + i + "-IS").textContent =
+    inicialesSuplente;
 }
 
 //---------- Showing Content Code  Related
