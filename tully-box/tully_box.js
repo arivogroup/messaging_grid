@@ -120,8 +120,10 @@ Webflow.push(function () {
   let requestTimeout_tully = 10000;
   // error messages
   let errorMessageTimedOut_tully =
-    "Oops! Seems this timed out. Please try again.";
-  let errorMessage_tully = "Oops! Something went wrong. Please try again.";
+    "Parece que ha tomado mas tiempo del esperado. Por favor, intentelo de nuevo.";
+  let errorMessage_tully = "Algo salio mal. Por favor, intentelo de nuevo.";
+  let errorMessageBlankForm_tully =
+    "Debes haber completado por lo menos una idea por cada seccion del cuadro";
 
   // capture form submit
   form_tully.addEventListener("submit", triggerSubmit_tully);
