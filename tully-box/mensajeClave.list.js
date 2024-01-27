@@ -126,8 +126,8 @@ for (let j = 0; j < array_sign_C3.length; j++) {
 }
 
 // Array -> List - Col 4
-for (let i = 0; i < E_N.length; i++) {
-  if (E_N[i] === "¬") {
+for (let i = 0; i < col_4.length; i++) {
+  if (col_4[i] === "¬") {
     array_sign_C4.push(i);
   }
 }
