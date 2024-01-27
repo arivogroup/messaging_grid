@@ -71,6 +71,9 @@ Webflow.push(function () {
         let j = i + 1;
         let inputField = name + j;
         let respuesta = document.getElementById(inputField).value;
+        if (respuesta === "") {
+          answeres.push(" ¬");
+        }
         if (respuesta != "") {
           answeres.push(respuesta + "¬");
         }
