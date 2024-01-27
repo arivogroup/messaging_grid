@@ -174,7 +174,8 @@ for (let i = 0; i < array_Problemas.length; i++) {
   listItem.textContent = resultBullet;
   list_Problemas.appendChild(listItem);
   let posicion = i + 1;
-  document.getElementById("Problematica-" + posicion).value = result;
+  document.getElementById("Problematica-" + posicion).value =
+    array_Problemas[i];
 }
 
 // Tematicas -> Medios
@@ -184,5 +185,5 @@ for (let i = 0; i < array_Medios.length; i++) {
   listItem.textContent = resultBullet;
   list_Medios.appendChild(listItem);
   let posicion = i + 1;
-  document.getElementById("Medios-" + posicion).value = result;
+  document.getElementById("Medios-" + posicion).value = array_Medios[i];
 }
