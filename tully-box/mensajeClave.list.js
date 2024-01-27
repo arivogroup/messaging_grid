@@ -50,6 +50,7 @@ for (let j = 0; j < array_sign_C1.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_C1R1.appendChild(listItem);
+    document.getElementById("Capacidad-1").value = result;
   }
   if (array_sign_C1[j] != 0 && j != 1) {
     let initPosition = array_sign_C1[j - 1] + 2;
@@ -59,8 +60,10 @@ for (let j = 0; j < array_sign_C1.length; j++) {
     listItem.textContent = resultBullet;
     if (j < 6) {
       list_C1R1.appendChild(listItem);
+      document.getElementById("Capacidad-" + j).value = result;
     } else {
       list_C1R2.appendChild(listItem);
+      document.getElementById("Capacidad-" + j).value = result;
     }
   }
 }
@@ -80,6 +83,7 @@ for (let j = 0; j < array_sign_C2.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_C2R1.appendChild(listItem);
+    document.getElementById("Vision-1").value = result;
   }
   if (array_sign_C2[j] != 0 && j != 1) {
     let initPosition = array_sign_C2[j - 1] + 2;
@@ -89,8 +93,10 @@ for (let j = 0; j < array_sign_C2.length; j++) {
     listItem.textContent = resultBullet;
     if (j < 6) {
       list_C2R1.appendChild(listItem);
+      document.getElementById("Vision-" + j).value = result;
     } else {
       list_C2R2.appendChild(listItem);
+      document.getElementById("Vision-" + j).value = result;
     }
   }
 }
@@ -110,6 +116,7 @@ for (let j = 0; j < array_sign_C3.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_C3R1.appendChild(listItem);
+    document.getElementById("Pasion-1").value = result;
   }
   if (array_sign_C3[j] != 0 && j != 1) {
     let initPosition = array_sign_C3[j - 1] + 2;
@@ -119,8 +126,10 @@ for (let j = 0; j < array_sign_C3.length; j++) {
     listItem.textContent = resultBullet;
     if (j < 6) {
       list_C3R1.appendChild(listItem);
+      document.getElementById("Pasion-" + j).value = result;
     } else {
       list_C3R2.appendChild(listItem);
+      document.getElementById("Pasion-" + j).value = result;
     }
   }
 }
@@ -140,6 +149,7 @@ for (let j = 0; j < array_sign_C4.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_C4R1.appendChild(listItem);
+    document.getElementById("Comunitario-1").value = result;
   }
   if (array_sign_C4[j] != 0 && j != 1) {
     let initPosition = array_sign_C4[j - 1] + 2;
@@ -149,8 +159,10 @@ for (let j = 0; j < array_sign_C4.length; j++) {
     listItem.textContent = resultBullet;
     if (j < 6) {
       list_C4R1.appendChild(listItem);
+      document.getElementById("Comunitario-" + j).value = result;
     } else {
       list_C4R2.appendChild(listItem);
+      document.getElementById("Comunitario-" + j).value = result;
     }
   }
 }
@@ -161,6 +173,8 @@ for (let i = 0; i < array_Problemas.length; i++) {
   let listItem = document.createElement("li");
   listItem.textContent = resultBullet;
   list_Problemas.appendChild(listItem);
+  let posicion = i + 1;
+  document.getElementById("Problematica-" + posicion).value = result;
 }
 
 // Tematicas -> Medios
@@ -169,4 +183,6 @@ for (let i = 0; i < array_Medios.length; i++) {
   let listItem = document.createElement("li");
   listItem.textContent = resultBullet;
   list_Medios.appendChild(listItem);
+  let posicion = i + 1;
+  document.getElementById("Medios-" + posicion).value = result;
 }
