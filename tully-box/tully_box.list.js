@@ -1,3 +1,33 @@
+// Get Initials from  Names
+let nombrePrincipal = document.getElementById("nombre-principal").value;
+let nombreSuplente = document.getElementById("nombre-suplente").vaalue;
+let inicialesPrincipal = "";
+let inicialesSuplente = "";
+
+// Iniciales Nombre Principal
+for (let i = 0; i < nombrePrincipal.length; i++) {
+  if (i === 0 && nombrePrincipal[i] != " ") {
+    inicialesPrincipal = nombrePrincipal[i];
+  } else if (i === 0 && nombrePrincipal[i] === " ") {
+    inicialesPrincipal = nombrePrincipal[i + 1];
+  }
+  if (i != 0 && nombrePrincipal[i] === " " && i < nombrePrincipal.length - 1) {
+    inicialesPrincipal = inicialesPrincipal + nombrePrincipal[i + 1];
+  }
+}
+
+// Iniciales Nombre Suplente
+for (let i = 0; i < nombreSuplente.length; i++) {
+  if (i === 0 && nombreSuplente[i] != " ") {
+    inicialesSuplente = nombreSuplente[i];
+  } else if (i === 0 && nombreSuplente[i] === " ") {
+    inicialesSuplente = nombreSuplente[i + 1];
+  }
+  if (i != 0 && nombreSuplente[i] === " " && i < nombreSuplente.length - 1) {
+    inicialesSuplente = inicialesSuplente + nombreSuplente[i + 1];
+  }
+}
+
 //---------- Showing Content Code  Related
 // ListItem Nosotros-Nosotros
 let list_NN = document.querySelector(".output_nn ul");
