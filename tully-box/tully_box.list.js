@@ -70,12 +70,15 @@ for (let i = 0; i < N_N.length; i++) {
   }
 }
 for (let j = 0; j < array_sign_NN.length; j++) {
+  let count = 1;
   if (array_sign_NN[j] != 0 && j === 1) {
     let result = N_N.slice(array_sign_NN[j - 1], array_sign_NN[j]);
     let resultBullet = "⦿ " + result;
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_NN.appendChild(listItem);
+    document.getElementById("N_N_1").value = result;
+    count = count++;
   }
   if (array_sign_NN[j] != 0 && j != 1) {
     let initPosition = array_sign_NN[j - 1] + 2;
@@ -84,6 +87,8 @@ for (let j = 0; j < array_sign_NN.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_NN.appendChild(listItem);
+    document.getElementById("N_N_" + count).value = result;
+    count = count++;
   }
 }
 
