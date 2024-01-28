@@ -50,21 +50,29 @@ for (let i = 1; i <= 4; i++) {
 // ListItem Nosotros-Nosotros
 let list_NN = document.querySelector(".output_nn ul");
 list_NN.innerHTML = "";
+let list_NN_Print = document.querySelector(".output_nn_print ul");
+list_NN_Print.innerHTML = "";
 let array_sign_NN = [0];
 
 // ListItem Ellos-Ellos
 let list_EE = document.querySelector(".output_ee ul");
 list_EE.innerHTML = "";
+let list_EE_Print = document.querySelector(".output_ee_print ul");
+list_EE_Print.innerHTML = "";
 let array_sign_EE = [0];
 
 // ListItem Nosotros-Ellos
 let list_NE = document.querySelector(".output_ne ul");
 list_NE.innerHTML = "";
+let list_NE_Print = document.querySelector(".output_ne_print ul");
+list_NE_Print.innerHTML = "";
 let array_sign_NE = [0];
 
 // ListItem Ellos-Nosotros
 let list_EN = document.querySelector(".output_en ul");
 list_EN.innerHTML = "";
+let list_EN_Print = document.querySelector(".output_en_print ul");
+list_EN_Print.innerHTML = "";
 let array_sign_EN = [0];
 
 // Array -> List - N_N
@@ -80,6 +88,9 @@ for (let j = 0; j < array_sign_NN.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_NN.appendChild(listItem);
+    let listItemPrint = document.createElement("li");
+    listItemPrint.textContent = resultBullet;
+    list_NN_Print.appendChild(listItemPrint);
     document.getElementById("N_N_1").value = result;
   }
   if (array_sign_NN[j] != 0 && j != 1) {
@@ -89,6 +100,9 @@ for (let j = 0; j < array_sign_NN.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_NN.appendChild(listItem);
+    let listItemPrint = document.createElement("li");
+    listItemPrint.textContent = resultBullet;
+    list_NN_Print.appendChild(listItemPrint);
     document.getElementById("N_N_" + j).value = result;
   }
 }
@@ -106,6 +120,9 @@ for (let j = 0; j < array_sign_EE.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_EE.appendChild(listItem);
+    let listItemPrint = document.createElement("li");
+    listItemPrint.textContent = resultBullet;
+    list_EE_Print.appendChild(listItemPrint);
     document.getElementById("E_E_1").value = result;
   }
   if (array_sign_EE[j] != 0 && j != 1) {
@@ -115,6 +132,9 @@ for (let j = 0; j < array_sign_EE.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_EE.appendChild(listItem);
+    let listItemPrint = document.createElement("li");
+    listItemPrint.textContent = resultBullet;
+    list_EE_Print.appendChild(listItemPrint);
     document.getElementById("E_E_" + j).value = result;
   }
 }
@@ -132,6 +152,9 @@ for (let j = 0; j < array_sign_NE.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_NE.appendChild(listItem);
+    let listItemPrint = document.createElement("li");
+    listItemPrint.textContent = resultBullet;
+    list_NE_Print.appendChild(listItemPrint);
     document.getElementById("N_E_1").value = result;
   }
   if (array_sign_NE[j] != 0 && j != 1) {
@@ -141,6 +164,9 @@ for (let j = 0; j < array_sign_NE.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_NE.appendChild(listItem);
+    let listItemPrint = document.createElement("li");
+    listItemPrint.textContent = resultBullet;
+    list_NE_Print.appendChild(listItemPrint);
     document.getElementById("N_E_" + j).value = result;
   }
 }
@@ -158,6 +184,9 @@ for (let j = 0; j < array_sign_EN.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_EN.appendChild(listItem);
+    let listItemPrint = document.createElement("li");
+    listItemPrint.textContent = resultBullet;
+    list_EN_Print.appendChild(listItemPrint);
     document.getElementById("E_N_1").value = result;
   }
   if (array_sign_EN[j] != 0 && j != 1) {
@@ -167,6 +196,9 @@ for (let j = 0; j < array_sign_EN.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_EN.appendChild(listItem);
+    let listItemPrint = document.createElement("li");
+    listItemPrint.textContent = resultBullet;
+    list_EN_Print.appendChild(listItemPrint);
     document.getElementById("E_N_" + j).value = result;
   }
 }
