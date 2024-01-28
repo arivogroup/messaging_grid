@@ -21,6 +21,8 @@ for (let i = 1; i <= 4; i++) {
     inicialesPrincipal;
   document.getElementById("List-Col-" + i + "-IP").textContent =
     inicialesPrincipal;
+  document.getElementById("Print-Col-" + i + "-IP").textContent =
+    inicialesPrincipal;
 }
 
 // Iniciales Nombre Suplente
@@ -39,6 +41,8 @@ for (let i = 1; i <= 4; i++) {
   document.getElementById("Form-Col-" + i + "-IS").textContent =
     inicialesSuplente;
   document.getElementById("List-Col-" + i + "-IS").textContent =
+    inicialesSuplente;
+  document.getElementById("Print-Col-" + i + "-IS").textContent =
     inicialesSuplente;
 }
 
