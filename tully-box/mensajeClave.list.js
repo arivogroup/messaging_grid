@@ -4,6 +4,10 @@ let list_C1R1 = document.querySelector(".output_capacidad_1 ul");
 list_C1R1.innerHTML = "";
 let list_C1R2 = document.querySelector(".output_capacidad_2 ul");
 list_C1R2.innerHTML = "";
+let list_C1R1_Print = document.querySelector(".output_capacidad_1_print ul");
+list_C1R1_Print.innerHTML = "";
+let list_C1R2_Print = document.querySelector(".output_capacidad_2_print ul");
+list_C1R2_Print.innerHTML = "";
 let array_sign_C1 = [0];
 
 // ListItem Col 2 (Vision)
@@ -11,6 +15,10 @@ let list_C2R1 = document.querySelector(".output_vision_1 ul");
 list_C2R1.innerHTML = "";
 let list_C2R2 = document.querySelector(".output_vision_2 ul");
 list_C2R2.innerHTML = "";
+let list_C2R1_Print = document.querySelector(".output_vision_1_print ul");
+list_C2R1_Print.innerHTML = "";
+let list_C2R2_Print = document.querySelector(".output_vision_2_print ul");
+list_C2R2_Print.innerHTML = "";
 let array_sign_C2 = [0];
 
 // ListItem Col 3 (Pasion por servir)
@@ -18,6 +26,14 @@ let list_C3R1 = document.querySelector(".output_pasion_servir_1 ul");
 list_C3R1.innerHTML = "";
 let list_C3R2 = document.querySelector(".output_pasion_servir_2 ul");
 list_C3R2.innerHTML = "";
+let list_C3R1_Print = document.querySelector(
+  ".output_pasion_servir_1_print ul",
+);
+list_C3R1_Print.innerHTML = "";
+let list_C3R2_Print = document.querySelector(
+  ".output_pasion_servir_2_print ul",
+);
+list_C3R2_Print.innerHTML = "";
 let array_sign_C3 = [0];
 
 // ListItem Col 4 (Involucramiento comunitario)
@@ -25,15 +41,27 @@ let list_C4R1 = document.querySelector(".output_involucramiento_1 ul");
 list_C4R1.innerHTML = "";
 let list_C4R2 = document.querySelector(".output_involucramiento_2 ul");
 list_C4R2.innerHTML = "";
+let list_C4R1_Print = document.querySelector(
+  ".output_involucramiento_1_print ul",
+);
+list_C4R1_Print.innerHTML = "";
+let list_C4R2_Print = document.querySelector(
+  ".output_involucramiento_2_print ul",
+);
+list_C4R2_Print.innerHTML = "";
 let array_sign_C4 = [0];
 
 //ListItem -> Problemas
 let list_Problemas = document.querySelector(".output_problemas ul");
 list_Problemas.innerHTML = "";
+let list_Problemas_Print = document.querySelector(".output_problemas_print ul");
+list_Problemas_Print.innerHTML = "";
 
 //ListItem -> Medios
 let list_Medios = document.querySelector(".output_medios ul");
 list_Medios.innerHTML = "";
+let list_Medios_Print = document.querySelector(".output_medios_print ul");
+list_Medios_Print.innerHTML = "";
 
 // Array -> List - Col 1
 for (let i = 0; i < col_1.length; i++) {
@@ -50,6 +78,9 @@ for (let j = 0; j < array_sign_C1.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_C1R1.appendChild(listItem);
+    let listItem_Print = document.createElement("li");
+    listItem_Print.textContent = resultBullet;
+    list_C1R1_Print.appendChild(listItem_Print);
     document.getElementById("Capacidad-1").value = result;
   }
   if (array_sign_C1[j] != 0 && j != 1) {
@@ -58,11 +89,15 @@ for (let j = 0; j < array_sign_C1.length; j++) {
     let resultBullet = "⦿ " + result;
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
+    let listItem_Print = document.createElement("li");
+    listItem_Print.textContent = resultBullet;
     if (j < 6) {
       list_C1R1.appendChild(listItem);
+      list_C1R1_Print.appendChild(listItem_Print);
       document.getElementById("Capacidad-" + j).value = result;
     } else {
       list_C1R2.appendChild(listItem);
+      list_C1R2_Print.appendChild(listItem_Print);
       document.getElementById("Capacidad-" + j).value = result;
     }
   }
@@ -83,6 +118,9 @@ for (let j = 0; j < array_sign_C2.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_C2R1.appendChild(listItem);
+    let listItem_Print = document.createElement("li");
+    listItem_Print.textContent = resultBullet;
+    list_C2R1_Print.appendChild(listItem_Print);
     document.getElementById("Vision-1").value = result;
   }
   if (array_sign_C2[j] != 0 && j != 1) {
@@ -91,11 +129,15 @@ for (let j = 0; j < array_sign_C2.length; j++) {
     let resultBullet = "⦿ " + result;
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
+    let listItem_Print = document.createElement("li");
+    listItem_Print.textContent = resultBullet;
     if (j < 6) {
       list_C2R1.appendChild(listItem);
+      list_C2R1_Print.appendChild(listItem_Print);
       document.getElementById("Vision-" + j).value = result;
     } else {
       list_C2R2.appendChild(listItem);
+      list_C2R2_Print.appendChild(listItem_Print);
       document.getElementById("Vision-" + j).value = result;
     }
   }
@@ -116,6 +158,9 @@ for (let j = 0; j < array_sign_C3.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_C3R1.appendChild(listItem);
+    let listItem_Print = document.createElement("li");
+    listItem_Print.textContent = resultBullet;
+    list_C3R1_Print.appendChild(listItem_Print);
     document.getElementById("Pasion-1").value = result;
   }
   if (array_sign_C3[j] != 0 && j != 1) {
@@ -124,11 +169,15 @@ for (let j = 0; j < array_sign_C3.length; j++) {
     let resultBullet = "⦿ " + result;
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
+    let listItem_Print = document.createElement("li");
+    listItem_Print.textContent = resultBullet;
     if (j < 6) {
       list_C3R1.appendChild(listItem);
+      list_C3R1_Print.appendChild(listItem_Print);
       document.getElementById("Pasion-" + j).value = result;
     } else {
       list_C3R2.appendChild(listItem);
+      list_C3R2_Print.appendChild(listItem_Print);
       document.getElementById("Pasion-" + j).value = result;
     }
   }
@@ -149,6 +198,9 @@ for (let j = 0; j < array_sign_C4.length; j++) {
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
     list_C4R1.appendChild(listItem);
+    let listItem_Print = document.createElement("li");
+    listItem_Print.textContent = resultBullet;
+    list_C4R1_Print.appendChild(listItem_Print);
     document.getElementById("Comunitario-1").value = result;
   }
   if (array_sign_C4[j] != 0 && j != 1) {
@@ -157,11 +209,15 @@ for (let j = 0; j < array_sign_C4.length; j++) {
     let resultBullet = "⦿ " + result;
     let listItem = document.createElement("li");
     listItem.textContent = resultBullet;
+    let listItem_Print = document.createElement("li");
+    listItem_Print.textContent = resultBullet;
     if (j < 6) {
       list_C4R1.appendChild(listItem);
+      list_C4R1_Print.appendChild(listItem_Print);
       document.getElementById("Comunitario-" + j).value = result;
     } else {
       list_C4R2.appendChild(listItem);
+      list_C4R2_Print.appendChild(listItem_Print);
       document.getElementById("Comunitario-" + j).value = result;
     }
   }
@@ -173,6 +229,9 @@ for (let i = 0; i < array_Problemas.length; i++) {
   let listItem = document.createElement("li");
   listItem.textContent = resultBullet;
   list_Problemas.appendChild(listItem);
+  let listItem_Print = document.createElement("li");
+  listItem_Print.textContent = resultBullet;
+  list_Problemas_Print.appendChild(listItem_Print);
   let posicion = i + 1;
   document.getElementById("Problematica-" + posicion).value =
     array_Problemas[i];
@@ -184,6 +243,9 @@ for (let i = 0; i < array_Medios.length; i++) {
   let listItem = document.createElement("li");
   listItem.textContent = resultBullet;
   list_Medios.appendChild(listItem);
+  let listItem_Print = document.createElement("li");
+  listItem_Print.textContent = resultBullet;
+  list_Medios_Print.appendChild(listItem_Print);
   let posicion = i + 1;
   document.getElementById("Medios-" + posicion).value = array_Medios[i];
 }
